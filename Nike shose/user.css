@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: url('image/bg1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  color: #c72092;
+  cursor: pointer;
+}
+
+.navbar .logo span {
+  color: #6c14d0;
+  text-decoration: underline;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #c72092;
+}
+
+.profile-section {
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(108, 20, 208, 0.4);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #c72092;
+}
+
+.profile-card h2 {
+  font-size: 28px;
+  color: #6c14d0;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#edit-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#edit-btn:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 15px rgba(199, 32, 146, 0.4);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #c72092;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="email"],
+.modal-content form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content form button {
+  padding: 10px;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content form button:hover {
+  transform: scale(1.05);
+}
+
+.purchase-history {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(108, 20, 208, 0.2);
+  text-align: center;
+}
+
+.purchase-history h2 {
+  color: #c72092;
+  margin-bottom: 20px;
+}
+
+.purchase-block {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.purchase-block h3 {
+  margin-bottom: 10px;
+  color: #6c14d0;
+}
+
+.purchase-item {
+  display: inline-block;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+}
+
+.purchase-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.purchase-item p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #333;
+}
+ .purchase-block {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px dashed #c72092;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(108, 20, 208, 0.1);
+}
+
+.purchase-block h3 {
+  color: #6c14d0;
+  margin-bottom: 15px;
+}
+
+/* .purchase-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.purchase-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #c72092;
+}
+
+.purchase-item p {
+  margin: 0;
+  color: #444;
+} */
+.clear-btn {
+  margin: 20px 0;
+  padding: 10px 25px;
+  background: rgb(100, 9, 100);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clear-btn:hover {
+  background: rgb(44, 139, 0);
+  transform: scale(1.05);
+}
