@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Favorites</title>
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Nike<span>Store</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <a href="user.html" title="Profile">
+  <i class="fa-solid fa-user"></i>
+</a>
+
+      <li><a href="favorites.html" class="active">♥ Likes</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <h1>Your <span>Favorites</span></h1>
+    <div class="cart-container" id="favorites-container">
+      <!-- JS will populate here -->
+    </div>
+  </section>
+
+  <script src="favorites.js"></script>
+</body>
+</html>

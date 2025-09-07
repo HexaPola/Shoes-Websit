@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: url('image/bg1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  color: #c72092;
+  cursor: pointer;
+}
+
+.navbar .logo span {
+  color: #6c14d0;
+  text-decoration: underline;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #c72092;
+}
+
+/* Cart Section */
+.cart-section {
+  padding: 120px 50px 50px;
+  min-height: 100vh;
+}
+
+.cart-section h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px #6c14d0;
+}
+
+.cart-item img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.cart-item-details h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.cart-item-details p {
+  color: #777;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-controls input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cart-item-controls button {
+ background: linear-gradient(to right,#c72092 , #6c14d0);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-item-controls button:hover {
+  background: #c72092;
+}
+
+/* Cart Summary */
+.cart-summary {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cart-summary h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#checkout-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#checkout-btn:hover {
+  transform: scale(1.05);
+}
+/* زرار Remove الخاص بالسلة */
+.fancy-remove {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+}
+
+.fancy-remove span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.fancy-remove span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.fancy-remove:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.fancy-remove:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.fancy-remove:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+.fancy-remove span {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  pointer-events: none; /* يمنع تداخل الضغط بين الـ span والزر */
+}
+
+.fancy-remove .text {
+  pointer-events: auto; /* لكن نخلي النص قابل للضغط */
+}
+.fa-user {
+  padding: 0px ;
+  color: #030002;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+
+.fa-user:hover {
+  transform: scale(3.05);
+  color: #c72092;
+ 
+}

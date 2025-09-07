@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ملفي الشخصي</title>
+  <link rel="stylesheet" href="user.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- شريط التنقل -->
+  <div class="navbar">
+    <div class="logo">Nike <span>Store</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="file:///F:/Engineer%20Pola's%20File/ok/Nike%20shose/index.html#Products">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="#" class="active">Profile</a></li>
+    </ul>
+  </div>
+
+  <!-- الملف الشخصي -->
+  <section class="profile-section">
+    <div class="profile-card">
+      <img src="image/user-placeholder.png" alt="Profile Picture" id="profile-picture" />
+      <h2 id="profile-name">user name</h2>
+      <p id="profile-email">user@example.com</p>
+      <button id="edit-btn">Modify data</button>
+    </div>
+
+    <!-- سجل المشتريات -->
+    <div class="purchase-history">
+      <h2>🛍️ Purchase History</h2>
+      <button id="clear-purchase-history" class="clear-btn">🗑️ Delete all purchases</button>
+
+      <div id="purchase-list"></div>
+    </div>
+  </section>
+
+  <!-- مودال التعديل -->
+  <div class="modal" id="edit-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h2>Modify data</h2>
+      <form id="edit-form">
+        <label for="name">The name:</label>
+        <input type="text" id="name-input" />
+
+        <label for="email">The gmail:</label>
+        <input type="email" id="email-input" />
+
+        <label for="image">New photo:</label>
+        <input type="file" id="image-input" accept="image/*" />
+
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="user.js"></script>
+</body>
+</html>
